@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MaterialComponents.NoActionBar">
         <activity
+            android:name=".WillSuccessful"
+            android:exported="false" />
+        <activity
             android:name=".Hierarchy"
             android:exported="false" />
         <activity
