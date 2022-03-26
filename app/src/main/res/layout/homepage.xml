@@ -27,12 +27,15 @@
                 android:textSize="28sp" />
 
             <de.hdodenhof.circleimageview.CircleImageView
-                android:layout_width="75dp"
-                android:layout_height="75dp"
-                android:background="@drawable/circle_bg"
-                android:src="@drawable/ic_baseline_person_24"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
                 android:layout_alignParentEnd="true"
-                android:layout_margin="15dp"/>
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="25dp"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/circle_bg"
+                android:src="@drawable/ic_baseline_person_24" />
 
         </RelativeLayout>
         
@@ -52,19 +55,18 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1.2">
+        android:layout_weight="1.2"
+        android:orientation="vertical">
 
         <LinearLayout
             android:id="@+id/rlayer2"
             android:layout_width="match_parent"
             android:layout_height="110dp"
-            android:layout_below="@id/rlayer1"
             android:layout_marginHorizontal="15dp"
             android:layout_marginTop="20dp"
-            android:background="@drawable/blue_bg_borderbox"
+            android:background="@drawable/pink_border_box"
             android:orientation="horizontal"
-            android:weightSum="3"
-            android:backgroundTint="@color/white">
+            android:weightSum="3">
 
             <LinearLayout
                 android:layout_width="0dp"
@@ -76,9 +78,9 @@
                     android:id="@+id/potholesReported"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="8"
+                    android:text="Will Status:"
                     android:textColor="@color/blue"
-                    android:textSize="35sp"
+                    android:textSize="18sp"
                     android:textAlignment="center"
                     android:layout_marginTop="20dp"
                     android:layout_gravity="center_horizontal"
@@ -87,14 +89,34 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Total potholes\nreported"
+                    android:text="Creation Pending"
                     android:textAlignment="center"
                     android:textColor="@color/black"
-                    android:textSize="14sp"
+                    android:textSize="12sp"
                     android:layout_gravity="center_horizontal"
-                    android:fontFamily="@font/opensans_regular"/>
+                    android:fontFamily="@font/montserrat_regular"
+                    android:textStyle="italic"
+                    android:layout_marginTop="5dp"/>
+
+                <TextView
+                    android:id="@+id/createWill"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Create Will"
+                    android:textAlignment="center"
+                    android:textColor="@color/pink"
+                    android:textSize="12sp"
+                    android:layout_gravity="center_horizontal"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:layout_marginTop="5dp"/>
 
             </LinearLayout>
+            
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="#696969"
+                android:layout_marginVertical="20dp"/>
 
             <LinearLayout
                 android:layout_width="0dp"
@@ -108,7 +130,7 @@
                     android:layout_height="wrap_content"
                     android:text="2"
                     android:textAlignment="center"
-                    android:textColor="@color/blue"
+                    android:textColor="@color/pink"
                     android:textSize="35sp"
                     android:layout_marginTop="20dp"
                     android:layout_gravity="center_horizontal"
@@ -117,13 +139,19 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Potholes\nfixed"
+                    android:text="Portfolios as\nNOMINATOR"
                     android:textAlignment="center"
                     android:textColor="@color/black"
-                    android:textSize="14sp"
+                    android:textSize="12sp"
                     android:layout_gravity="center_horizontal"
                     android:fontFamily="@font/opensans_regular"/>
             </LinearLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="#696969"
+                android:layout_marginVertical="20dp"/>
 
             <LinearLayout
                 android:layout_width="0dp"
@@ -137,7 +165,7 @@
                     android:layout_height="wrap_content"
                     android:text="3"
                     android:textAlignment="center"
-                    android:textColor="@color/blue"
+                    android:textColor="@color/pink"
                     android:textSize="35sp"
                     android:layout_marginTop="20dp"
                     android:layout_gravity="center_horizontal"
@@ -146,7 +174,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Safer trips\ntravelled"
+                    android:text="Portfolios as\nNOMINEE"
                     android:textAlignment="center"
                     android:textColor="@color/black"
                     android:textSize="14sp"
@@ -155,6 +183,99 @@
             </LinearLayout>
 
         </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select Portfolio:"
+            android:textColor="@color/white"
+            android:textSize="25dp"
+            android:fontFamily="@font/montserrat_regular"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="20dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:weightSum="2">
+
+            <ImageButton
+                android:id="@+id/insurance"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:src="@drawable/insurance"
+                android:backgroundTint="#0000"/>
+
+            <ImageButton
+                android:id="@+id/bank"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:src="@drawable/bank"
+                android:backgroundTint="#0000"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-10dp"
+            android:layout_marginBottom="-40dp">
+
+            <ImageButton
+                android:id="@+id/property"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:src="@drawable/property"
+                android:backgroundTint="#0000"/>
+
+            <ImageButton
+                android:id="@+id/shares"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:src="@drawable/shares"
+                android:backgroundTint="#0000"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.2"
+        android:background="@color/white"
+        android:weightSum="4">
+
+        <ImageButton
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#0000"
+            android:src="@drawable/ic_group_user"/>
+
+        <ImageButton
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#0000"
+            android:src="@drawable/ic_tick"/>
+        <ImageButton
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#0000"
+            android:src="@drawable/medals"/>
+        <ImageButton
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#0000"
+            android:src="@drawable/ic_heirarchy"/>
 
     </LinearLayout>
 
