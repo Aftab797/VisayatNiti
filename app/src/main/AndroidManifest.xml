@@ -23,7 +23,12 @@
         </activity>
         <activity
             android:name=".HomePage"
-            android:exported="true"></activity>
+            android:exported="false"></activity>
+        <activity android:name=".BankPage"
+            android:exported="false"/>
+        <activity android:name=".InsurancePage"
+            android:exported="false"/>
+
     </application>
 
 </manifest>
