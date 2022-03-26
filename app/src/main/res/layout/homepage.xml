@@ -105,10 +105,10 @@
                     android:text="Create Will"
                     android:textAlignment="center"
                     android:textColor="@color/pink"
-                    android:textSize="12sp"
+                    android:textSize="14sp"
                     android:layout_gravity="center_horizontal"
                     android:fontFamily="@font/montserrat_regular"
-                    android:layout_marginTop="5dp"/>
+                    android:layout_marginTop="8dp"/>
 
             </LinearLayout>
             
@@ -242,6 +242,25 @@
 
         </LinearLayout>
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Vasiyat Niti is owned &amp; manged by The Government of India"
+            android:textSize="12sp"
+            android:layout_gravity="center"
+            android:layout_marginTop="35dp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/montserrat_regular"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/contact"
+            android:textSize="14sp"
+            android:layout_gravity="center"
+            android:textColor="@color/white"
+            android:fontFamily="@font/montserrat_regular"/>
+
     </LinearLayout>
 
     <LinearLayout
@@ -258,18 +277,35 @@
             android:background="#0000"
             android:src="@drawable/ic_group_user"/>
 
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#696969"/>
+
         <ImageButton
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="#0000"
             android:src="@drawable/ic_tick"/>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#696969"/>
+
         <ImageButton
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="#0000"
             android:src="@drawable/medals"/>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#696969"/>
+
         <ImageButton
             android:layout_width="0dp"
             android:layout_height="match_parent"

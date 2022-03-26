@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">VisayatNiti</string>
+
+    <string name="contact">
+        <font color="#FFFFFF">Helpdesk Number: </font>
+        <font color="#DD3D4A">1800 333 8904</font>
+        <font color="#FFFFFF"> | Email: </font>
+        <font color="#DD3D4A">vasiyatniti@gov.in</font>
+    </string>
 </resources>
