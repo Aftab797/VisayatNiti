@@ -57,7 +57,7 @@
                 android:fontFamily="@font/opensans_regular"
                 android:text="Your Will is important\nfor you and your loved\nones; track it here."
                 android:textColor="@color/white"
-                android:textSize="30sp" />
+                android:textSize="25sp" />
 
         </RelativeLayout>
 
@@ -68,7 +68,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:src="@drawable/tick"
-        android:layout_marginTop="35dp"/>
+        android:layout_marginTop="15dp"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -94,7 +94,7 @@
 
             <TextView
                 android:layout_width="match_parent"
-                android:layout_height="76dp"
+                android:layout_height="40dp"
                 android:layout_gravity="center"
                 android:layout_marginTop="25sp"
                 android:fontFamily="@font/montserrat_semibold"
@@ -115,15 +115,24 @@
                     android:layout_height="wrap_content"
                     android:text="Token ID : WILL89XX4503mh22\nReg :THANE,AX78905\nRegistration Date: 26/03/2022\nAmount Paid : 100INR\nDocument Uploaded:- will.nikhilsinggh.pdf\n\nWitness:\n1.Pojaa Singh\n2.Nisha Awasthi"
                     android:fontFamily="@font/montserrat_regular"
-                    android:textSize="23sp"
+                    android:textSize="20sp"
                     android:padding="15dp"
                     android:textColor="@color/blue"/>
             </LinearLayout>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_gravity="bottom"
+                android:src="@drawable/helpdesk"/>
+
+
 
 
         </LinearLayout>
 
+
     </LinearLayout>
+
 
 
     <LinearLayout
