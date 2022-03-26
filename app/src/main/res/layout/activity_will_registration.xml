@@ -18,14 +18,31 @@
             android:layout_height="200dp"
             android:background="@drawable/rectangle3"
             >
-
         </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="wrap_content"
+            android:drawableStart="@drawable/upload"
+            android:layout_height="75dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="-40dp"
+            android:background="@drawable/button"
+            android:elevation="40dp"
+            android:paddingHorizontal="40dp"
+            android:paddingVertical="2dp"
+            android:text="   Upload will document"
+            android:textColor="@color/white"
+            android:textSize="18dp" />
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="800dp"
+            android:layout_height="0dp"
+            android:layout_weight="0.6"
             android:orientation="vertical"
             android:padding="15dp">
+
+
+
 
             <TextView
                 android:id="@+id/witness"
@@ -36,12 +53,201 @@
                 android:textSize="25sp"
                 android:textColor="@color/blue"
                 />
+            <!--witness 1 textbox -->
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:id="@+id/email"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
 
+                android:layout_marginTop="30dp"
+                android:hint="Witness 1"
+                app:boxCornerRadiusBottomEnd="15dp"
+                app:boxCornerRadiusBottomStart="15dp"
+                app:boxCornerRadiusTopEnd="15dp"
+                app:boxCornerRadiusTopStart="15dp"
+                android:elevation="6dp"
+                app:endIconMode="clear_text"
+                app:boxStrokeColor="@color/blue"
+                app:hintTextColor="@color/blue"
+                app:errorEnabled="true"
+                android:layout_marginBottom="10dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/emailEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/opensans_regular"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <!-- Witness 1 adhaar-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:id="@+id/email"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:hint="Aadhar Card Number"
+                android:layout_marginTop="30dp"
+                app:boxCornerRadiusBottomEnd="15dp"
+                app:boxCornerRadiusBottomStart="15dp"
+                app:boxCornerRadiusTopEnd="15dp"
+                app:boxCornerRadiusTopStart="15dp"
+                android:elevation="6dp"
+                app:endIconMode="clear_text"
+                app:boxStrokeColor="@color/blue"
+                app:hintTextColor="@color/blue"
+                app:errorEnabled="true"
+                android:layout_marginBottom="10dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/emailEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/opensans_regular"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- witness 1 PAN card number-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:id="@+id/email"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:hint="PAN Card Number"
+                android:layout_marginTop="30dp"
+                app:boxCornerRadiusBottomEnd="15dp"
+                app:boxCornerRadiusBottomStart="15dp"
+                app:boxCornerRadiusTopEnd="15dp"
+                app:boxCornerRadiusTopStart="15dp"
+                android:elevation="6dp"
+                app:endIconMode="clear_text"
+                app:boxStrokeColor="@color/blue"
+                app:hintTextColor="@color/blue"
+                app:errorEnabled="true"
+                android:layout_marginBottom="10dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/emailEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/opensans_regular"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <ImageView
+                android:layout_margin="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:src="@drawable/dashstroke"/>
+
+            <!--Witness 2 name-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:id="@+id/email"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:hint="Witness 2"
+                android:layout_marginTop="30dp"
+                app:boxCornerRadiusBottomEnd="15dp"
+                app:boxCornerRadiusBottomStart="15dp"
+                app:boxCornerRadiusTopEnd="15dp"
+                app:boxCornerRadiusTopStart="15dp"
+                android:elevation="6dp"
+                app:endIconMode="clear_text"
+                app:boxStrokeColor="@color/blue"
+                app:hintTextColor="@color/blue"
+                app:errorEnabled="true"
+                android:layout_marginBottom="10dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/emailEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/opensans_regular"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!--witness 2 aadhar number-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:id="@+id/email"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:hint="Aadhar Card Number of witness 2"
+                android:layout_marginTop="30dp"
+                app:boxCornerRadiusBottomEnd="15dp"
+                app:boxCornerRadiusBottomStart="15dp"
+                app:boxCornerRadiusTopEnd="15dp"
+                app:boxCornerRadiusTopStart="15dp"
+                android:elevation="6dp"
+                app:endIconMode="clear_text"
+                app:boxStrokeColor="@color/blue"
+                app:hintTextColor="@color/blue"
+                app:errorEnabled="true"
+                android:layout_marginBottom="10dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/emailEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/opensans_regular"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!--Pan card number of witness 2-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:id="@+id/email"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:hint="Pan card Number"
+                android:layout_marginTop="30dp"
+                app:boxCornerRadiusBottomEnd="15dp"
+                app:boxCornerRadiusBottomStart="15dp"
+                app:boxCornerRadiusTopEnd="15dp"
+                app:boxCornerRadiusTopStart="15dp"
+                android:elevation="6dp"
+                app:endIconMode="clear_text"
+                app:boxStrokeColor="@color/blue"
+                app:hintTextColor="@color/blue"
+                app:errorEnabled="true"
+                android:layout_marginBottom="10dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/emailEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/opensans_regular"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:text="Please select preferred registrar:"
+                android:fontFamily="@font/montserrat_regular"
+                android:textSize="25sp"
+                android:layout_marginTop="15dp"
+                android:textColor="@color/blue"
+                />
+            <!--Registrar-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:id="@+id/email"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:hint="Registrar"
                 android:layout_marginTop="30dp"
                 app:boxCornerRadiusBottomEnd="15dp"
                 app:boxCornerRadiusBottomStart="15dp"
@@ -65,6 +271,60 @@
             </com.google.android.material.textfield.TextInputLayout>
 
         </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.2"
+            android:background="@color/white"
+            android:weightSum="4">
+
+            <ImageButton
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#0000"
+                android:src="@drawable/ic_group_user"/>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="#696969"/>
+
+            <ImageButton
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#0000"
+                android:src="@drawable/ic_tick"/>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="#696969"/>
+
+            <ImageButton
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#0000"
+                android:src="@drawable/medals"/>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="#696969"/>
+
+            <ImageButton
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#0000"
+                android:src="@drawable/ic_heirarchy"/>
+
+        </LinearLayout>
+
+
     </LinearLayout>
 
 </androidx.core.widget.NestedScrollView>
