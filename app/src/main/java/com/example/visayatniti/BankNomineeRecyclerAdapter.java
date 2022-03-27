@@ -11,35 +11,37 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-public class BankRecyclerAdapter extends RecyclerView.Adapter<BankRecyclerAdapter.MyViewHolder> {
+public class BankNomineeRecyclerAdapter extends RecyclerView.Adapter<BankNomineeRecyclerAdapter.MyViewHolder> {
 
     private Context context;
     private ArrayList Account, Bank, Branch, Nominee;
     Integer Number;
 
-    BankRecyclerAdapter(Context context,Integer Number, ArrayList Account, ArrayList Bank, ArrayList Branch, ArrayList Nominee){
+    BankNomineeRecyclerAdapter(Context context, Integer Number, ArrayList Account, ArrayList Bank, ArrayList Branch, ArrayList Nominee){
         this.context = context;
         this.Account = Account;
         this.Bank = Bank;
         this.Branch = Branch;
         this.Nominee = Nominee;
-        this.Number = Number;}
+    this.Number = Number;}
 
     @NonNull
     @Override
-    public BankRecyclerAdapter.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public BankNomineeRecyclerAdapter.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(context);
         View view= inflater.inflate(R.layout.cardview, parent, false);
 
-        return new BankRecyclerAdapter.MyViewHolder(view);
+        return new BankNomineeRecyclerAdapter.MyViewHolder(view);
     }
 
+
+
     @Override
-    public void onBindViewHolder(@NonNull BankRecyclerAdapter.MyViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull BankNomineeRecyclerAdapter.MyViewHolder holder, int position) {
 
         holder.accountNo.setText("A/C : "+String.valueOf(Account.get(position)));
         holder.bank.setText("BANK : " +String.valueOf(Bank.get(position))+"\nBRANCH : "+String.valueOf(Branch.get(position)));
-        holder.nominee.setText("Nominee : "+String.valueOf(Nominee.get(position)));
+        holder.nominee.setText("Account Holder : "+String.valueOf(Nominee.get(position)));
 
     }
 
@@ -55,7 +57,7 @@ public class BankRecyclerAdapter extends RecyclerView.Adapter<BankRecyclerAdapte
             super(itemView);
             accountNo = itemView.findViewById(R.id.accountNo);
             bank = itemView.findViewById(R.id.details);
-            nominee = itemView.findViewById(R.id.nominee);
+            nominee = itemView.findViewById(R.id.accountName);
         }
     }
 }

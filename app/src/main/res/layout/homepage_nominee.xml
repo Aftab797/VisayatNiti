@@ -89,7 +89,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Creation Pending"
+                    android:text="Registration Pending"
                     android:textAlignment="center"
                     android:textColor="@color/black"
                     android:textSize="12sp"
@@ -102,13 +102,12 @@
                     android:id="@+id/createWill"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Create Will"
+                    android:text="Register Will"
                     android:textAlignment="center"
                     android:textColor="@color/pink"
                     android:textSize="14sp"
                     android:layout_gravity="center_horizontal"
-                    android:fontFamily="@font/montserrat_regular"
-                    android:layout_marginTop="8dp"/>
+                    android:fontFamily="@font/montserrat_regular"/>
 
             </LinearLayout>
             
@@ -213,7 +212,7 @@
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:src="@drawable/ins"
+                android:src="@drawable/banks"
                 android:backgroundTint="#0000"/>
 
         </LinearLayout>
@@ -229,7 +228,7 @@
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:src="@drawable/property"
+                android:src="@drawable/shrs"
                 android:backgroundTint="#0000"/>
 
             <ImageButton
@@ -237,7 +236,7 @@
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:src="@drawable/shares"
+                android:src="@drawable/propt"
                 android:backgroundTint="#0000"/>
 
         </LinearLayout>
@@ -275,7 +274,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="#0000"
-            android:src="@drawable/ic_group_user_pink"/>
+            android:src="@drawable/ic_group_user"/>
 
         <View
             android:layout_width="1dp"
@@ -288,7 +287,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="#0000"
-            android:src="@drawable/ic_tick"/>
+            android:src="@drawable/ic_tick_pink"/>
 
         <View
             android:layout_width="1dp"

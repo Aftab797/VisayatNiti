@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".InsurancePage"
+    tools:context=".BankPage"
     android:background="@color/white">
 
     <LinearLayout
@@ -55,7 +55,7 @@
                 android:layout_centerVertical="true"
                 android:layout_marginStart="10dp"
                 android:fontFamily="@font/opensans_regular"
-                android:text="Insurance portfolio\nas Nominee"
+                android:text="Shares portfolio\nas Nominee"
                 android:textColor="@color/white"
                 android:textSize="30sp" />
 
@@ -66,7 +66,7 @@
                 android:background="@drawable/white_box"
                 android:layout_centerVertical="true"
                 android:layout_alignParentEnd="true"
-                android:layout_marginEnd="10dp">
+                android:layout_marginEnd="15dp">
 
                 <TextView
                     android:id="@+id/num_of_nomi"
@@ -119,51 +119,51 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="All"
-                        android:background="@drawable/blue_box"
-                        android:textColor="@color/blue"
+                        android:background="@drawable/pink_box"
+                        android:textColor="@color/pink"
                         android:layout_marginEnd="10dp"
                         android:elevation="5dp"/>
 
                     <androidx.appcompat.widget.AppCompatButton
-                        android:id="@+id/lifeInsurance"
+                        android:id="@+id/deposit"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Life Insurance"
-                        android:background="@drawable/blue_box"
-                        android:textColor="@color/blue"
-                        android:layout_marginEnd="10dp"
-                        android:paddingHorizontal="15dp"
-                        android:elevation="5dp"/>
-
-                    <androidx.appcompat.widget.AppCompatButton
-                        android:id="@+id/healthInsurance"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Health Insurance"
-                        android:background="@drawable/blue_box"
-                        android:textColor="@color/blue"
+                        android:text="Fixed Deposits"
+                        android:background="@drawable/pink_box"
+                        android:textColor="@color/pink"
                         android:layout_marginEnd="10dp"
                         android:paddingHorizontal="15dp"
                         android:elevation="5dp"/>
 
                     <androidx.appcompat.widget.AppCompatButton
-                        android:id="@+id/endPlan"
+                        android:id="@+id/accounts"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Endowmnment Plan"
-                        android:background="@drawable/blue_box"
-                        android:textColor="@color/blue"
+                        android:text="Savings Account"
+                        android:background="@drawable/pink_box"
+                        android:textColor="@color/pink"
                         android:layout_marginEnd="10dp"
                         android:paddingHorizontal="15dp"
                         android:elevation="5dp"/>
 
                     <androidx.appcompat.widget.AppCompatButton
-                        android:id="@+id/carInsurance"
+                        android:id="@+id/currentAccount"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Car Insurance"
-                        android:background="@drawable/blue_box"
-                        android:textColor="@color/blue"
+                        android:text="Current Account"
+                        android:background="@drawable/pink_box"
+                        android:textColor="@color/pink"
+                        android:layout_marginEnd="10dp"
+                        android:paddingHorizontal="15dp"
+                        android:elevation="5dp"/>
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/providentFunds"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Provident Fund"
+                        android:background="@drawable/pink_box"
+                        android:textColor="@color/pink"
                         android:layout_marginEnd="10dp"
                         android:paddingHorizontal="15dp"
                         android:elevation="5dp"/>
@@ -178,7 +178,7 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="2.2"
-            android:background="@drawable/gray_fill"
+            android:background="@drawable/pink_fill"
             android:paddingHorizontal="30dp"
             android:paddingTop="20dp">
 

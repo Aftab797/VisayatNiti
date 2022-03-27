@@ -22,19 +22,21 @@
             android:layout_height="wrap_content"
             android:src="@drawable/circle"
             />
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="120dp"
+            android:src="@drawable/emblem"
+            android:layout_marginTop="-160dp"
+            android:layout_marginStart="170dp"
+            android:layout_marginBottom="70dp"/>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:gravity="center"
             >
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/emblem"
-                android:layout_marginHorizontal="18dp"
 
-                />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -91,7 +93,8 @@
             app:boxStrokeColor="@color/blue"
             app:hintTextColor="@color/blue"
             app:errorEnabled="true"
-            android:layout_marginBottom="10dp">
+            android:layout_marginBottom="10dp"
+            android:textColorHint="@color/black">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/emailEditText"

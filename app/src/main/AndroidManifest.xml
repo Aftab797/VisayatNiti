@@ -51,6 +51,13 @@
         <activity
             android:name=".HomePageNominee"
             android:exported="false" />
+        <activity
+            android:name=".PropertyNominee"
+            android:exported="false" />
+
+        <activity
+            android:name=".SharesPageNominee"
+            android:exported="false" />
     </application>
 
 </manifest>

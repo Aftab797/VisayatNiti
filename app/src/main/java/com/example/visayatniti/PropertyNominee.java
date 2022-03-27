@@ -1,23 +1,24 @@
 package com.example.visayatniti;
 
+import android.os.Bundle;
+import android.view.View;
+import android.widget.TextView;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
 import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.os.Bundle;
-import android.view.View;
-import android.widget.TextView;
-
 import java.util.ArrayList;
 
-public class BankPageNominee extends AppCompatActivity {
+public class PropertyNominee extends AppCompatActivity {
 
     RecyclerView recyclerView;
-    BankNomineeRecyclerAdapter adapter;
+    PropertyNomineeRecyclerAdapter adapter;
     AppCompatButton mAll, mDeposits, mSavings, mCurrent, mProvident;
-    ArrayList<String> Nominee, AccountNo, Bank, Branch,Balance;
+    ArrayList<String> Nominee, Company, CurrentPrice, Invested;
+    ArrayList<Object> images;
     TextView nums;
 
     @Override
@@ -40,9 +41,9 @@ public class BankPageNominee extends AppCompatActivity {
 
         mAll.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.pink_btn));
         mAll.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.white));
-        adapter = new BankNomineeRecyclerAdapter(this, AccountNo.size() ,AccountNo, Bank, Branch, Nominee);
+        adapter = new PropertyNomineeRecyclerAdapter(this, Company.size() ,Company, CurrentPrice, Invested, Nominee, images);
         recyclerView.setAdapter(adapter);
-        nums.setText(String.valueOf(AccountNo.size()));
+        nums.setText(String.valueOf(Company.size()));
 
 
         mAll.setOnClickListener(new View.OnClickListener() {
@@ -63,9 +64,9 @@ public class BankPageNominee extends AppCompatActivity {
                 mProvident.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.pink_box));
                 mProvident.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.pink));
 
-                adapter = new BankNomineeRecyclerAdapter(getApplicationContext(), AccountNo.size() ,AccountNo, Bank, Branch, Nominee);
+                adapter = new PropertyNomineeRecyclerAdapter(getApplicationContext(),  Company.size() ,Company, CurrentPrice, Invested, Nominee,images);
                 recyclerView.setAdapter(adapter);
-                nums.setText(String.valueOf(AccountNo.size()));
+                nums.setText(String.valueOf(Company.size()));
             }
         });
 
@@ -87,7 +88,7 @@ public class BankPageNominee extends AppCompatActivity {
                 mProvident.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.pink_box));
                 mProvident.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.pink));
 
-                adapter = new BankNomineeRecyclerAdapter(getApplicationContext(), 4 ,AccountNo, Bank, Branch, Nominee);
+                adapter = new PropertyNomineeRecyclerAdapter(getApplicationContext(), 4 ,Company, CurrentPrice, Invested, Nominee, images);
                 recyclerView.setAdapter(adapter);
                 nums.setText("4");
             }
@@ -112,7 +113,7 @@ public class BankPageNominee extends AppCompatActivity {
                 mProvident.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.pink_box));
                 mProvident.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.pink));
 
-                adapter = new BankNomineeRecyclerAdapter(getApplicationContext(), 5 ,AccountNo, Bank, Branch, Nominee);
+                adapter = new PropertyNomineeRecyclerAdapter(getApplicationContext(), 5 ,Company, CurrentPrice, Invested, Nominee,images);
                 recyclerView.setAdapter(adapter);
                 nums.setText("5");
             }
@@ -136,7 +137,7 @@ public class BankPageNominee extends AppCompatActivity {
                 mProvident.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.pink_box));
                 mProvident.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.pink));
 
-                adapter = new BankNomineeRecyclerAdapter(getApplicationContext(), 2 ,AccountNo, Bank, Branch, Nominee);
+                adapter = new PropertyNomineeRecyclerAdapter(getApplicationContext(), 2 ,Company, CurrentPrice, Invested, Nominee,images);
                 recyclerView.setAdapter(adapter);
                 nums.setText("2");
             }
@@ -160,7 +161,7 @@ public class BankPageNominee extends AppCompatActivity {
                 mCurrent.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.pink_box));
                 mCurrent.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.pink));
 
-                adapter = new BankNomineeRecyclerAdapter(getApplicationContext(), 6 ,AccountNo, Bank, Branch, Nominee);
+                adapter = new PropertyNomineeRecyclerAdapter(getApplicationContext(), 6 ,Company, CurrentPrice, Invested, Nominee,images);
                 recyclerView.setAdapter(adapter);
                 nums.setText("6");
             }
@@ -171,9 +172,7 @@ public class BankPageNominee extends AppCompatActivity {
     private void initializeArrays() {
 
         Nominee = new ArrayList<>();
-        Nominee.add("Puneet Singh");
-        Nominee.add("Yash Yadav");
-        Nominee.add("Neha Kaur");
+
         Nominee.add("Pooja Singh");
         Nominee.add("Ravi Singh");
         Nominee.add("Devi Kaur");
@@ -182,41 +181,41 @@ public class BankPageNominee extends AppCompatActivity {
         Nominee.add("Honey Kumar");
         Nominee.add("Sukhwinder Rai");
 
-        AccountNo = new ArrayList<>();
-        AccountNo.add("1365100987561");
-        AccountNo.add("5421098467757");
-        AccountNo.add("6531625336510");
-        AccountNo.add("9520901665093");
-        AccountNo.add("4050690057210");
-        AccountNo.add("8533939469828");
-        AccountNo.add("1260385675781");
-        AccountNo.add("3088068312329");
-        AccountNo.add("3385311289976");
-        AccountNo.add("1365100987561");
+        Company = new ArrayList<>();
+        Company.add("Crompton Greaves");
+        Company.add("Adani Port");
+        Company.add("PayTM");
+        Company.add("ONGC");
+        Company.add("Gillette");
+        Company.add("Pfizer");
+        Company.add("Britannia");
 
-        Bank = new ArrayList<>();
-        Bank.add("Axis Bank");
-        Bank.add("HDFC Bank");
-        Bank.add("Punjab National Bank");
-        Bank.add("ICICI Bank");
-        Bank.add("IDFC First Bank");
-        Bank.add("IDBI Bank");
-        Bank.add("State Bank of India");
-        Bank.add("Bank of Maharashtra");
-        Bank.add("Bank of Baroda");
-        Bank.add("Kotak Mahindra Bank");
+        CurrentPrice = new ArrayList<>();
+        CurrentPrice.add("100.08");
+        CurrentPrice.add("3096.78");
+        CurrentPrice.add("234.76");
+        CurrentPrice.add("7013.80");
+        CurrentPrice.add("300.45");
+        CurrentPrice.add("23.5");
+        CurrentPrice.add("300.45");
 
-        Branch = new ArrayList<>();
-        Branch.add("Seawoods");
-        Branch.add("Nerul");
-        Branch.add("Kharghar");
-        Branch.add("Juinagar");
-        Branch.add("Seawoods");
-        Branch.add("Nerul");
-        Branch.add("Kharghar");
-        Branch.add("Juinagar");
-        Branch.add("Kharghar");
-        Branch.add("Juinagar");
+        Invested = new ArrayList<>();
+        Invested.add("1,20,000");
+        Invested.add("50,0000");
+        Invested.add("2,45,000");
+        Invested.add("20,16,350");
+        Invested.add("75,000");
+        Invested.add("1,00,000");
+        Invested.add("10,12,000");
+
+        images = new ArrayList<>();
+        images.add(R.drawable.crompton);
+        images.add(R.drawable.adani);
+        images.add(R.drawable.paytm);
+        images.add(R.drawable.ongc);
+        images.add(R.drawable.gillete);
+        images.add(R.drawable.pfizer);
+        images.add(R.drawable.britania);
 
 
     }

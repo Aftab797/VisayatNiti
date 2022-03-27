@@ -30,7 +30,7 @@ public class HomePageNominee extends AppCompatActivity {
         mShares.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(), Shares.class));
+                startActivity(new Intent(getApplicationContext(), SharesPageNominee.class));
                 overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
             }
         });
@@ -38,7 +38,7 @@ public class HomePageNominee extends AppCompatActivity {
         mProperty.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(), Property.class));
+                startActivity(new Intent(getApplicationContext(), PropertyNominee.class));
                 overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
             }
         });
@@ -46,7 +46,7 @@ public class HomePageNominee extends AppCompatActivity {
         mInsurance.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(), InsurancePage.class));
+                startActivity(new Intent(getApplicationContext(), InsurancePageNominee.class));
                 overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
             }
         });
@@ -71,6 +71,14 @@ public class HomePageNominee extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(getApplicationContext(), WillRegistration.class));
+                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+            }
+        });
+
+        mHeirar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(), Hierarchy.class));
                 overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
             }
         });

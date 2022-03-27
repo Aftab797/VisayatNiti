@@ -1,18 +1,18 @@
 package com.example.visayatniti;
 
+import android.os.Bundle;
+import android.view.View;
+import android.widget.TextView;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
 import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.os.Bundle;
-import android.view.View;
-import android.widget.TextView;
-
 import java.util.ArrayList;
 
-public class BankPageNominee extends AppCompatActivity {
+public class SharesPageNominee extends AppCompatActivity {
 
     RecyclerView recyclerView;
     BankNomineeRecyclerAdapter adapter;
@@ -23,7 +23,7 @@ public class BankPageNominee extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_bank_page_nominee);
+        setContentView(R.layout.activity_share_page_nominee);
 
         initializeArrays();
 

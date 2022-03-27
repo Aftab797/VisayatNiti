@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".InsurancePage"
+    tools:context=".PropertyNominee"
     android:background="@color/white">
 
     <LinearLayout
@@ -55,7 +55,7 @@
                 android:layout_centerVertical="true"
                 android:layout_marginStart="10dp"
                 android:fontFamily="@font/opensans_regular"
-                android:text="Insurance portfolio\nas Nominee"
+                android:text="Property portfolio\nas Nominee"
                 android:textColor="@color/white"
                 android:textSize="30sp" />
 
@@ -69,11 +69,11 @@
                 android:layout_marginEnd="10dp">
 
                 <TextView
-                    android:id="@+id/num_of_nomi"
+                    android:id="@+id/num_of_pothole"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/opensans_bold"
-                    android:text="8"
+                    android:text="3"
                     android:textColor="@color/blue"
                     android:textFontWeight="400"
                     android:textSize="30sp" />
@@ -100,7 +100,7 @@
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:src="@drawable/info"/>
+                android:src="@drawable/infoprop" />
 
             <HorizontalScrollView
                 android:layout_marginTop="10dp"
@@ -125,10 +125,10 @@
                         android:elevation="5dp"/>
 
                     <androidx.appcompat.widget.AppCompatButton
-                        android:id="@+id/lifeInsurance"
+                        android:id="@+id/commercial"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Life Insurance"
+                        android:text="Commercial"
                         android:background="@drawable/blue_box"
                         android:textColor="@color/blue"
                         android:layout_marginEnd="10dp"
@@ -136,10 +136,10 @@
                         android:elevation="5dp"/>
 
                     <androidx.appcompat.widget.AppCompatButton
-                        android:id="@+id/healthInsurance"
+                        android:id="@+id/residential"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Health Insurance"
+                        android:text="Residential"
                         android:background="@drawable/blue_box"
                         android:textColor="@color/blue"
                         android:layout_marginEnd="10dp"
@@ -147,21 +147,10 @@
                         android:elevation="5dp"/>
 
                     <androidx.appcompat.widget.AppCompatButton
-                        android:id="@+id/endPlan"
+                        android:id="@+id/land"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Endowmnment Plan"
-                        android:background="@drawable/blue_box"
-                        android:textColor="@color/blue"
-                        android:layout_marginEnd="10dp"
-                        android:paddingHorizontal="15dp"
-                        android:elevation="5dp"/>
-
-                    <androidx.appcompat.widget.AppCompatButton
-                        android:id="@+id/carInsurance"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Car Insurance"
+                        android:text="Land"
                         android:background="@drawable/blue_box"
                         android:textColor="@color/blue"
                         android:layout_marginEnd="10dp"

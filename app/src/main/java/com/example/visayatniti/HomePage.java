@@ -11,7 +11,7 @@ import android.widget.TextView;
 public class HomePage extends AppCompatActivity {
 
     ImageButton mInsurance, mBank, mProperty, mShares, mNominee, mWill, mHeirar;
-    TextView mCreateWill;
+    TextView mCreateWill, mRegist;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +26,12 @@ public class HomePage extends AppCompatActivity {
         mNominee = findViewById(R.id.nominee);
         mWill = findViewById(R.id.will);
         mHeirar =findViewById(R.id.heirarchy);
+        mRegist = findViewById(R.id.regist);
+
+        if(getIntent().hasExtra("registered")){
+            mRegist.setText("Registration Complete");
+            mCreateWill.setText("View Details");
+        }
 
         mShares.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -82,7 +88,13 @@ public class HomePage extends AppCompatActivity {
                 overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
             }
         });
-
+        mHeirar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(), Hierarchy.class));
+                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+            }
+        });
 
     }
 }
