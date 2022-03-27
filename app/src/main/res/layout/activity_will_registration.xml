@@ -10,14 +10,53 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        >
+        android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="200dp"
+            android:layout_height="300dp"
             android:background="@drawable/rectangle3"
-            >
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="30dp"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:text="Vasiyat Niti"
+                    android:textColor="@color/white"
+                    android:textSize="28sp" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="25dp"
+                    android:layout_marginBottom="15dp"
+                    android:background="@drawable/circle_bg"
+                    android:src="@drawable/ic_baseline_person_24"
+                    android:backgroundTint="@color/white"/>
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Your Will is important for you and your loved ones; track it here."
+                android:textSize="30sp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="40dp"
+                android:layout_marginStart="15dp"
+                android:textColor="@color/white"
+                android:fontFamily="@font/montserrat_regular"/>
+
         </LinearLayout>
 
         <androidx.appcompat.widget.AppCompatButton
@@ -41,9 +80,6 @@
             android:orientation="vertical"
             android:padding="15dp">
 
-
-
-
             <TextView
                 android:id="@+id/witness"
                 android:layout_width="match_parent"
@@ -57,7 +93,7 @@
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
-                android:id="@+id/email"
+                android:id="@+id/witness1"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
 
                 android:layout_marginTop="30dp"
@@ -74,7 +110,6 @@
                 android:layout_marginBottom="10dp">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/emailEditText"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:fontFamily="@font/opensans_regular"
@@ -86,7 +121,7 @@
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
-                android:id="@+id/email"
+                android:id="@+id/witAdhaar"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
                 android:hint="Aadhar Card Number"
                 android:layout_marginTop="30dp"
@@ -102,7 +137,6 @@
                 android:layout_marginBottom="10dp">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/emailEditText"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:fontFamily="@font/opensans_regular"
@@ -115,7 +149,7 @@
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
-                android:id="@+id/email"
+                android:id="@+id/witPan"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
                 android:hint="PAN Card Number"
                 android:layout_marginTop="30dp"
@@ -131,7 +165,6 @@
                 android:layout_marginBottom="10dp">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/emailEditText"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:fontFamily="@font/opensans_regular"
@@ -149,7 +182,7 @@
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
-                android:id="@+id/email"
+                android:id="@+id/witness2"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
                 android:hint="Witness 2"
                 android:layout_marginTop="30dp"
@@ -165,7 +198,6 @@
                 android:layout_marginBottom="10dp">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/emailEditText"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:fontFamily="@font/opensans_regular"
@@ -178,7 +210,7 @@
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
-                android:id="@+id/email"
+                android:id="@+id/wit2Adhaar"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
                 android:hint="Aadhar Card Number of witness 2"
                 android:layout_marginTop="30dp"
@@ -194,7 +226,6 @@
                 android:layout_marginBottom="10dp">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/emailEditText"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:fontFamily="@font/opensans_regular"
@@ -207,7 +238,7 @@
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
-                android:id="@+id/email"
+                android:id="@+id/wit2Pan"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
                 android:hint="Pan card Number"
                 android:layout_marginTop="30dp"
@@ -223,7 +254,6 @@
                 android:layout_marginBottom="10dp">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/emailEditText"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:fontFamily="@font/opensans_regular"
@@ -246,7 +276,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:id="@+id/email"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
                 android:hint="Registrar"
                 android:layout_marginTop="30dp"
                 app:boxCornerRadiusBottomEnd="15dp"
@@ -254,21 +284,46 @@
                 app:boxCornerRadiusTopEnd="15dp"
                 app:boxCornerRadiusTopStart="15dp"
                 android:elevation="6dp"
-                app:endIconMode="clear_text"
                 app:boxStrokeColor="@color/blue"
                 app:hintTextColor="@color/blue"
-                app:errorEnabled="true"
                 android:layout_marginBottom="10dp">
 
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/emailEditText"
+                <AutoCompleteTextView
+                    android:id="@+id/filled_exposed_dropdown"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:fontFamily="@font/opensans_regular"
                     android:textSize="18sp"
+                    android:paddingStart="15dp"
+                    android:inputType="none"
                     android:textColor="@color/black"/>
 
             </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Vasiyat Niti is owned &amp; manged by The Government of India"
+                android:textSize="12sp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginTop="35dp"
+                android:textColor="@color/blue"
+                android:fontFamily="@font/montserrat_regular"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_regular"
+                android:text="@string/contact1"
+                android:textSize="12sp"
+                android:gravity="center"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:backgroundTint="@color/blue"
+                android:text="Submit and Pay (100 INR)"/>
 
         </LinearLayout>
 
@@ -307,7 +362,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="#0000"
-                android:src="@drawable/medals"/>
+                android:src="@drawable/medals_pink"/>
 
             <View
                 android:layout_width="1dp"

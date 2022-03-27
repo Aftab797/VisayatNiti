@@ -2,10 +2,14 @@ package com.example.visayatniti;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 
 public class Shares extends AppCompatActivity {
+
+    RecyclerView recyclerView;
+    SharesRecyclerAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,7 +20,7 @@ public class Shares extends AppCompatActivity {
 
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        adapter = new InsuranceRecyclerAdapter(this);
+        adapter = new SharesRecyclerAdapter(this);
         recyclerView.setAdapter(adapter);
     }
 }
