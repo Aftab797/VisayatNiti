@@ -54,7 +54,7 @@ public class HomePageNominee extends AppCompatActivity {
         mBank.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(), BankPage.class));
+                startActivity(new Intent(getApplicationContext(), BankPageNominee.class));
                 overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
             }
         });

@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MaterialComponents.NoActionBar">
         <activity
+            android:name=".InsurancePageNominee"
+            android:exported="false" />
+        <activity
+            android:name=".BankPageNominee"
+            android:exported="false" />
+        <activity
             android:name=".WillSuccessful"
             android:exported="false" />
         <activity

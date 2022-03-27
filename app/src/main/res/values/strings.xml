@@ -18,11 +18,11 @@
     <string name="contact1">
         <font color="#0B0938">Helpdesk Number: </font><font color="#DD3D4A">1800 333 8904</font><font color="#0B0938"> | Email: </font><font color="#DD3D4A">vasiyatniti@gov.in</font>
     </string>
-    
+
     <string-array name="registrars">
         <item>Thane</item>
         <item>Mumbai</item>
         <item>Kalyan</item>
     </string-array>
-    
+
 </resources>
