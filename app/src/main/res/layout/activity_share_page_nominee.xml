@@ -55,7 +55,7 @@
                 android:layout_centerVertical="true"
                 android:layout_marginStart="10dp"
                 android:fontFamily="@font/opensans_regular"
-                android:text="Shares portfolio\nas Nominee"
+                android:text="Property portfolio\nas Nominee"
                 android:textColor="@color/white"
                 android:textSize="30sp" />
 
