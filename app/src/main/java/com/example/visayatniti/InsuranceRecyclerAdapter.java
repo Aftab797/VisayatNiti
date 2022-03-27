@@ -4,9 +4,11 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
@@ -14,10 +16,10 @@ import java.util.ArrayList;
 public class InsuranceRecyclerAdapter extends RecyclerView.Adapter<InsuranceRecyclerAdapter.MyViewHolder> {
 
     private Context context;
-    private ArrayList InsuranceAgent, Company, SumAssured, Nominee;
+    private ArrayList InsuranceAgent, Company, SumAssured, Nominee, images;
     Integer Number;
 
-    InsuranceRecyclerAdapter(Context context,Integer Number, ArrayList InsuranceAgent, ArrayList Company, ArrayList SumAssured, ArrayList Nominee)
+    InsuranceRecyclerAdapter(Context context,Integer Number, ArrayList InsuranceAgent, ArrayList Company, ArrayList SumAssured, ArrayList Nominee, ArrayList images)
     {
         this.context = context;
         this.InsuranceAgent = InsuranceAgent;
@@ -25,6 +27,7 @@ public class InsuranceRecyclerAdapter extends RecyclerView.Adapter<InsuranceRecy
         this.SumAssured = SumAssured;
         this.Nominee = Nominee;
         this.Number = Number;
+        this.images = images;
     }
 
     @NonNull
@@ -43,7 +46,7 @@ public class InsuranceRecyclerAdapter extends RecyclerView.Adapter<InsuranceRecy
         holder.company.setText("Company: " +String.valueOf(Company.get(position)));
         holder.sumAssured.setText("Sum Insured: Rs. "+String.valueOf(SumAssured.get(position)));
         holder.nominee.setText("Nominee : "+String.valueOf(Nominee.get(position)));
-
+        holder.imgView.setImageDrawable(ContextCompat.getDrawable(context, (Integer) images.get(position)));
     }
 
     @Override
@@ -54,12 +57,14 @@ public class InsuranceRecyclerAdapter extends RecyclerView.Adapter<InsuranceRecy
     public class MyViewHolder extends RecyclerView.ViewHolder {
 
         TextView agentName, company, nominee, sumAssured;
+        ImageView imgView;
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
             agentName = itemView.findViewById(R.id.accountNo);
             company = itemView.findViewById(R.id.details);
             sumAssured = itemView.findViewById(R.id.bal);
             nominee = itemView.findViewById(R.id.nominee);
+            imgView = itemView.findViewById(R.id.img);
         }
     }
 }

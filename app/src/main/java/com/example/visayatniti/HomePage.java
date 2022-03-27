@@ -29,7 +29,7 @@ public class HomePage extends AppCompatActivity {
         mRegist = findViewById(R.id.regist);
 
         if(getIntent().hasExtra("registered")){
-            mRegist.setText("Registration Complete");
+            mRegist.setText("Registration\nComplete");
             mCreateWill.setText("View Details");
         }
 

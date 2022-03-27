@@ -19,7 +19,7 @@ public class InsurancePage extends AppCompatActivity {
     AppCompatButton mAll, mDeposits, mSavings, mCurrent, mProvident;
     ArrayList<String> Nominee, InsuranceAgent, Company, sumAssured;
     TextView nums;
-
+    ArrayList<Object> images;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,7 +41,7 @@ public class InsurancePage extends AppCompatActivity {
         mAll.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.blue_btn));
         mAll.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.white));
 
-        adapter = new InsuranceRecyclerAdapter(this, InsuranceAgent.size() ,InsuranceAgent, Company, sumAssured, Nominee);
+        adapter = new InsuranceRecyclerAdapter(this, InsuranceAgent.size() ,InsuranceAgent, Company, sumAssured, Nominee,images);
         recyclerView.setAdapter(adapter);
         nums.setText(String.valueOf(InsuranceAgent.size()));
 
@@ -63,7 +63,7 @@ public class InsurancePage extends AppCompatActivity {
                 mProvident.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.pink_box));
                 mProvident.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.pink));
 
-                adapter = new InsuranceRecyclerAdapter(getApplicationContext(), InsuranceAgent.size() ,InsuranceAgent, Company, sumAssured, Nominee);
+                adapter = new InsuranceRecyclerAdapter(getApplicationContext(), InsuranceAgent.size() ,InsuranceAgent, Company, sumAssured, Nominee,images);
                 recyclerView.setAdapter(adapter);
                 nums.setText(String.valueOf(InsuranceAgent.size()));
             }
@@ -87,7 +87,7 @@ public class InsurancePage extends AppCompatActivity {
                 mProvident.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.pink_box));
                 mProvident.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.pink));
 
-                adapter = new InsuranceRecyclerAdapter(getApplicationContext(), 2 ,InsuranceAgent, Company, sumAssured, Nominee);
+                adapter = new InsuranceRecyclerAdapter(getApplicationContext(), 2 ,InsuranceAgent, Company, sumAssured, Nominee,images);
                 recyclerView.setAdapter(adapter);
                 nums.setText("2");
             }
@@ -112,7 +112,7 @@ public class InsurancePage extends AppCompatActivity {
                 mProvident.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.pink_box));
                 mProvident.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.pink));
 
-                adapter = new InsuranceRecyclerAdapter(getApplicationContext(), 1 ,InsuranceAgent, Company, sumAssured, Nominee);
+                adapter = new InsuranceRecyclerAdapter(getApplicationContext(), 1 ,InsuranceAgent, Company, sumAssured, Nominee,images);
                 recyclerView.setAdapter(adapter);
                 nums.setText("1");
             }
@@ -136,7 +136,7 @@ public class InsurancePage extends AppCompatActivity {
                 mProvident.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.pink_box));
                 mProvident.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.pink));
 
-                adapter = new InsuranceRecyclerAdapter(getApplicationContext(), 4 ,InsuranceAgent, Company, sumAssured, Nominee);
+                adapter = new InsuranceRecyclerAdapter(getApplicationContext(), 4 ,InsuranceAgent, Company, sumAssured, Nominee,images);
                 recyclerView.setAdapter(adapter);
                 nums.setText("4");
             }
@@ -160,7 +160,7 @@ public class InsurancePage extends AppCompatActivity {
                 mCurrent.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.pink_box));
                 mCurrent.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.pink));
 
-                adapter = new InsuranceRecyclerAdapter(getApplicationContext(), 3 ,InsuranceAgent, Company, sumAssured, Nominee);
+                adapter = new InsuranceRecyclerAdapter(getApplicationContext(), 3 ,InsuranceAgent, Company, sumAssured, Nominee,images);
                 recyclerView.setAdapter(adapter);
                 nums.setText("3");
             }
@@ -199,6 +199,14 @@ public class InsurancePage extends AppCompatActivity {
         Nominee.add("Jaspreet Dudhia");
         Nominee.add("Honey Kumar");
         Nominee.add("Sukhwinder Rai");
+
+        images = new ArrayList<>();
+        images.add(R.drawable.maxlife);
+        images.add(R.drawable.birla);
+        images.add(R.drawable.icic);
+        images.add(R.drawable.lic);
+        images.add(R.drawable.reliance);
+
 
     }
 }

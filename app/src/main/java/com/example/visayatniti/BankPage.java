@@ -18,6 +18,7 @@ public class BankPage extends AppCompatActivity {
     BankRecyclerAdapter adapter;
     AppCompatButton mAll, mDeposits, mSavings, mCurrent, mProvident;
     ArrayList<String> Nominee, AccountNo, Bank, Branch,Balance;
+    ArrayList<Object> images;
     TextView nums;
 
     @Override
@@ -40,7 +41,7 @@ public class BankPage extends AppCompatActivity {
 
         mAll.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.pink_btn));
         mAll.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.white));
-        adapter = new BankRecyclerAdapter(this, AccountNo.size() ,AccountNo, Bank, Branch, Nominee);
+        adapter = new BankRecyclerAdapter(this, AccountNo.size() ,AccountNo, Bank, Branch, Nominee, images);
         recyclerView.setAdapter(adapter);
         nums.setText(String.valueOf(AccountNo.size()));
 
@@ -63,7 +64,7 @@ public class BankPage extends AppCompatActivity {
                 mProvident.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.pink_box));
                 mProvident.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.pink));
 
-                adapter = new BankRecyclerAdapter(getApplicationContext(), AccountNo.size() ,AccountNo, Bank, Branch, Nominee);
+                adapter = new BankRecyclerAdapter(getApplicationContext(), AccountNo.size() ,AccountNo, Bank, Branch, Nominee, images);
                 recyclerView.setAdapter(adapter);
                 nums.setText(String.valueOf(AccountNo.size()));
             }
@@ -87,7 +88,7 @@ public class BankPage extends AppCompatActivity {
                 mProvident.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.pink_box));
                 mProvident.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.pink));
 
-                adapter = new BankRecyclerAdapter(getApplicationContext(), 4 ,AccountNo, Bank, Branch, Nominee);
+                adapter = new BankRecyclerAdapter(getApplicationContext(), 4 ,AccountNo, Bank, Branch, Nominee, images);
                 recyclerView.setAdapter(adapter);
                 nums.setText("4");
             }
@@ -112,7 +113,7 @@ public class BankPage extends AppCompatActivity {
                 mProvident.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.pink_box));
                 mProvident.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.pink));
 
-                adapter = new BankRecyclerAdapter(getApplicationContext(), 5 ,AccountNo, Bank, Branch, Nominee);
+                adapter = new BankRecyclerAdapter(getApplicationContext(), 5 ,AccountNo, Bank, Branch, Nominee, images);
                 recyclerView.setAdapter(adapter);
                 nums.setText("5");
             }
@@ -136,7 +137,7 @@ public class BankPage extends AppCompatActivity {
                 mProvident.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.pink_box));
                 mProvident.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.pink));
 
-                adapter = new BankRecyclerAdapter(getApplicationContext(), 2 ,AccountNo, Bank, Branch, Nominee);
+                adapter = new BankRecyclerAdapter(getApplicationContext(), 2 ,AccountNo, Bank, Branch, Nominee, images);
                 recyclerView.setAdapter(adapter);
                 nums.setText("2");
             }
@@ -160,7 +161,7 @@ public class BankPage extends AppCompatActivity {
                 mCurrent.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.pink_box));
                 mCurrent.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.pink));
 
-                adapter = new BankRecyclerAdapter(getApplicationContext(), 6 ,AccountNo, Bank, Branch, Nominee);
+                adapter = new BankRecyclerAdapter(getApplicationContext(), 6 ,AccountNo, Bank, Branch, Nominee, images);
                 recyclerView.setAdapter(adapter);
                 nums.setText("6");
             }
@@ -218,6 +219,17 @@ public class BankPage extends AppCompatActivity {
         Branch.add("Kharghar");
         Branch.add("Juinagar");
 
+        images = new ArrayList<>();
+        images.add(R.drawable.axis);
+        images.add(R.drawable.hdfc);
+        images.add(R.drawable.pnb);
+        images.add(R.drawable.icic);
+        images.add(R.drawable.maharashtra);
+        images.add(R.drawable.idbi);
+        images.add(R.drawable.hdfc);
+        images.add(R.drawable.maharashtra);
+        images.add(R.drawable.bob);
+        images.add(R.drawable.kotak);
 
     }
 }
